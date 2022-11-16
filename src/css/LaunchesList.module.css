@@ -1,0 +1,165 @@
+.launches_section{
+    width: 100vw;
+    max-width: 100%;
+    height: 100vh;
+}
+
+.launches_section .header_section{
+    height: 100vh;
+    max-width: 100%;
+    background-image: url('../assets/launches_header_desktop.webp');
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.launches_section .header_section svg{
+    position: absolute;
+    bottom: 50px;
+    animation: scrollAnim 2s ease-in-out none infinite;
+    cursor: pointer;
+}
+
+@keyframes scrollAnim {
+    0% {
+       opacity: 0;
+       transform: translateY(-30px);
+    }
+    50%{
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+.launches_section .list_section{
+    min-height: 100vh;
+    padding: 50px 0;
+    overflow: hidden;
+}
+.launches_section .list_section .card{
+    position: relative;
+    background-color: rgb(10, 10, 10);
+    height: 100%;
+    color: #fff;
+    border-radius: 0;
+    transition: all .325s ease-in-out;
+    transform-origin: top center;
+}
+.launches_section .list_section .card:hover{
+    transform: scale(1.025);
+    position: relative;
+    z-index: 5;
+    box-shadow: 0px 10px 15px #000;
+}
+.launches_section .list_section .card .card_header{
+    padding-bottom: 0;
+}
+.launches_section .list_section .card .card_header > div > span{
+    font-weight: 900 !important;
+    margin: 1rem 0 0 0;
+}
+.launches_section .list_section .card .card_content{
+    padding-top: 0;
+}
+.launches_section .list_section .card .card_content .additional_info{
+    display: inline-block;
+    margin-bottom: 1rem;
+    padding: 3px 10px;
+    line-height: 1;
+    outline: 2px solid #fff;
+    font-weight: 600;
+    margin-right: 10px;
+    margin-left: 2px;
+    margin-top: 5px;
+    font-size: 0.75rem;
+}
+.launches_section .list_section .card .card_content .badge{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    min-width: 75px;
+    outline: 1px solid #fff;
+    line-height: 1;
+}
+.launches_section .list_section .card .card_content .badge span{
+    font-weight: 900 !important;
+    position: relative;
+    transform: unset !important;
+    width: 100%;
+    font-size: 0.75rem;
+    line-height: 0;
+    text-transform: uppercase;
+}
+
+.launches_section .list_section .card .card_content h3{
+    font-weight: 500;
+    margin-bottom: 0.25rem !important;
+    line-height: 1;
+}
+
+.launches_section .list_section .card .card_content .card_actions{
+    padding:1rem 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.launches_section .list_section .card .card_content .card_actions .favourite{
+    color: #fff;
+}
+.launches_section .list_section .card .card_content .card_actions .favourite.selected{
+    color: rgb(124, 0, 0);
+}
+.launches_section .list_section .card .card_content .card_actions a,
+.launches_section .list_section .load_more{
+    font-weight: 900;
+    outline: 3px solid #fff;
+    border-radius: 0;
+    transition: all .325s ease-in-out;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+    overflow: hidden;
+    line-height: 1;
+    padding: 15px 20px;
+    margin: 1rem 0 1rem 3px;
+}
+.launches_section .list_section .card .card_content .card_actions a::after,
+.launches_section .list_section .load_more::after{
+    position: absolute;
+    content: '';
+    bottom: 0;
+    left: 0;
+    height: 110%;
+    width: 100%;
+    background: #fff;
+    transform: scaleY(0);
+    transition: transform 250ms cubic-bezier(0.05, 0.65, 0.18, 1);
+    transform-origin: bottom;
+    z-index: -1;
+    line-height: 1;
+}
+.launches_section .list_section .card .card_content .card_actions a:hover,
+.launches_section .list_section .card .card_content .card_actions a:focus,
+.launches_section .list_section .load_more:hover,
+.launches_section .list_section .load_more:focus{
+    color: #000;
+}
+.launches_section .list_section .card .card_content .card_actions a:hover:after,
+.launches_section .list_section .card .card_content .card_actions a:focus:after,
+.launches_section .list_section .load_more:focus:after,
+.launches_section .list_section .load_more:hover:after {
+  transform: scaleY(1);
+}
+.launches_section .list_section .load_more{
+    margin: 3rem auto;
+    align-self: center;
+}

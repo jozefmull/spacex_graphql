@@ -1,0 +1,33 @@
+{
+  "name": "akular_zadanie",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "codegen": "graphql-codegen --config codegen.ts"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/material": "^5.10.14",
+    "graphql": "^16.6.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "urql": "^3.0.3",
+    "vite-plugin-svgr": "^2.2.2"
+  },
+  "devDependencies": {
+    "@graphql-codegen/cli": "2.13.12",
+    "@graphql-codegen/client-preset": "1.1.4",
+    "@graphql-codegen/introspection": "2.2.1",
+    "@types/react": "^18.0.24",
+    "@types/react-dom": "^18.0.8",
+    "@vitejs/plugin-react": "^2.2.0",
+    "typescript": "^4.9.3",
+    "vite": "^3.2.3"
+  }
+}
