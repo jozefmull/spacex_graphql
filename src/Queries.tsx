@@ -18,3 +18,25 @@ export const getLaunches = graphql(/* GraphQL */ `
     }}
 `)
 
+export const getLaunchDetails = graphql(/* GraphQL */`
+  query getLaunchDetails($id: ID!){
+    launch(id: $id) {
+      id
+      details
+      launch_date_utc
+      launch_success
+      launch_site {
+        site_name_long
+      }
+      rocket {
+        rocket_name
+      }
+      links {
+        video_link
+        wikipedia
+      }
+      mission_name
+    }
+  }
+`)
+
