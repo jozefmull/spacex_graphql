@@ -2,7 +2,7 @@ import React from 'react'
 
 type Props = {}
 
-const LaunchDetails = (props: Props) => {
+const LaunchDetails:React.FC<Props> = (props: Props) => {
   return (
     <div>
       LaunchDetails

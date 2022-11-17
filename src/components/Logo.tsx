@@ -1,6 +1,6 @@
 import styles from '../css/Logo.module.css'
 
-const Logo = () => {
+const Logo:React.FC = () => {
   return (
     <svg version="1.1" x="0px" y="0px" viewBox="0 0 400 50" className={styles.app_logo}>
         <title>SpaceX Logo</title>

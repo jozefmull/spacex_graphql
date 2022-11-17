@@ -3,7 +3,7 @@
     top: 15px;
     left: 15px;
     fill: #fff;
-    width: 200px;
+    width: 250px;
     height: auto;
     transition: all .325s ease-in-out;
     z-index: 1000;
@@ -12,4 +12,15 @@
 .app_logo:hover{
     transform: scale(1.1);
     transform-origin: left center;
+}
+
+@media only screen and (max-width: 678px) {
+    .app_logo{
+        width: 200px;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .app_logo{
+        width: 150px;
+    }
 }

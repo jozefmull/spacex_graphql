@@ -7,7 +7,9 @@
 .launches_section .header_section{
     height: 100vh;
     max-width: 100%;
-    background-image: url('../assets/launches_header_desktop.webp');
+    background-image: url(../assets/launches_header_desktop.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -41,6 +43,17 @@
     min-height: 100vh;
     padding: 50px 0;
     overflow: hidden;
+}
+
+.launches_section .list_section .summary_wrap{
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0 2rem 0;
+    flex-wrap: wrap;
+}
+.launches_section .list_section .summary_wrap h2{
+    font-weight: 900;
 }
 .launches_section .list_section .card{
     position: relative;
@@ -115,6 +128,9 @@
 .launches_section .list_section .card .card_content .card_actions .favourite.selected{
     color: rgb(124, 0, 0);
 }
+.launches_section .list_section .card .card_content .card_actions .favourite > svg{
+    pointer-events: none;
+}
 .launches_section .list_section .card .card_content .card_actions a,
 .launches_section .list_section .load_more{
     font-weight: 900;
@@ -160,6 +176,36 @@
   transform: scaleY(1);
 }
 .launches_section .list_section .load_more{
-    margin: 3rem auto;
+    margin-right: 1rem;
     align-self: center;
+    position: relative;
+}
+.launches_section .list_section .load_more_wrap{
+    text-align:center;
+    width:100%;
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    margin: 2rem 0;
+    position: relative;
+}
+.launches_section .list_section .load_more_wrap > div{
+    position: absolute;
+    bottom: -40px;
+}
+.launches_section .list_section .load_more_wrap > div,
+.launches_section .list_section .load_more_wrap > div > span{
+    height: 25px !important;
+    width: 25px !important;
+}
+
+@media only screen and (max-width: 678px) {
+    .launches_section .header_section > h1{
+        font-size: 3rem;
+    }
+}
+@media only screen and (max-width: 420px) {
+    .launches_section .header_section > h1{
+        font-size: 2rem;
+    }
 }

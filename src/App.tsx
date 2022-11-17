@@ -6,7 +6,9 @@ import LaunchesList from './components/LaunchesList';
 import LaunchDetails from './components/LaunchDetails';
 import Logo from './components/Logo';
 
-function App() {
+import React from 'react'
+
+const App:React.FC = () => {
   return (
     <div className="App">
       <Link to='/'><Logo/></Link>
