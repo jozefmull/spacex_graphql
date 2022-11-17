@@ -16,7 +16,7 @@
   -webkit-text-size-adjust: 100%;
 }
 
-@media (prefers-color-scheme: light) {
+/* @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
@@ -27,7 +27,7 @@
   button {
     background-color: #f9f9f9;
   }
-}
+} */
 
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
