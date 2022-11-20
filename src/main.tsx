@@ -3,20 +3,14 @@ import ReactDOM from 'react-dom/client'
 import App from './App'
 import './index.css'
 import { GlobalProvider } from './context/GlobalState';
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import { theme } from './Theme'
 
 import { BrowserRouter as Router } from 'react-router-dom'
-
 import { createClient, Provider } from 'urql';
 
 const client = createClient({
   url: 'https://api.spacex.land/graphql/',
-});
-
-const theme = createTheme({
-  typography: {
-    "fontFamily": `"Montserrat", "Helvetica", "Arial", sans-serif`,
-  },
 });
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(

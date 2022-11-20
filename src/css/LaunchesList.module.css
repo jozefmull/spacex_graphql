@@ -17,6 +17,13 @@
 }
 .launches_section .header_section > h1{
     text-shadow: 2px 5px 10px rgba(0, 0, 0, 0.75);
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-duration: 325ms;
+    animation-delay: 200ms;
 }
 .launches_section .header_section svg{
     position: absolute;
@@ -56,6 +63,13 @@
 }
 .launches_section .list_section .summary_wrap h2{
     font-weight: 900;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    animation-duration: 325ms;
+    animation-delay: 300ms;
 }
 .launches_section .list_section .card{
     position: relative;
@@ -70,7 +84,7 @@
 }
 
 .launches_section .list_section .card:hover{
-    transform: scale(1.025);
+    transform: scale(1.025) !important;
     position: relative;
     z-index: 5;
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.75);
@@ -225,5 +239,16 @@
 @media only screen and (max-width: 420px) {
     .launches_section .header_section > h1{
         font-size: 2rem;
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-20px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateY(0);
     }
 }

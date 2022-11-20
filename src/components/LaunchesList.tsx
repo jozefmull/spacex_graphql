@@ -73,15 +73,16 @@ const LaunchesList:React.FC = () => {
         <Grid container spacing={2}>
           {!initialQuery && launchesList?.map((launch:LaunchPastLaunchList, id:number) => (
               <Grid item md={6} xs={12} key={`launch-${id}`}>
-                <LaunchCard 
-                  name={launch?.mission_name.toUpperCase()}
-                  rocket_name={launch?.rocket.rocket_name}
-                  site_name={launch?.launch_site.site_name}
-                  mission_id={launch?.mission_id[0]}
-                  launch_success={launch?.launch_success}
-                  date={launch?.launch_date_utc}
-                  id={launch?.id}
-                  />
+                  <LaunchCard 
+                    name={launch?.mission_name.toUpperCase()}
+                    rocket_name={launch?.rocket.rocket_name}
+                    site_name={launch?.launch_site.site_name}
+                    mission_id={launch?.mission_id[0]}
+                    launch_success={launch?.launch_success}
+                    date={launch?.launch_date_utc}
+                    id={launch?.id}
+                    idx={id}
+                    />
               </Grid>
           ))}
           {error ? (<Error message={error.message}/>) : null}

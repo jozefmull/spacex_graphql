@@ -20,6 +20,19 @@
   color: #000;
 }
 
+::-webkit-scrollbar {
+  width: 0.5rem;
+  padding: 2px;
+}
+ 
+::-webkit-scrollbar-track {
+  background-color: #000;
+  border: 2px solid #000;
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 

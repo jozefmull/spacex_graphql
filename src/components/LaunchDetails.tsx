@@ -27,7 +27,7 @@ const LaunchDetails:React.FC = () => {
       id: launchId ? launchId : ''
     },
     pause: shouldPause
-  })
+  })  
 
   useEffect(() => {
     if (launchId !== undefined) {
@@ -81,10 +81,16 @@ const LaunchDetails:React.FC = () => {
             <Typography variant='body1' component="p"  fontWeight={700} marginBottom={'2rem'}>
               {launchDetails?.launch?.details}
             </Typography>
-            {/* <Box sx={{display: 'flex', alignItems: 'center'}} className={styles.btnsWrap}>
-              <Button size="large" variant="contained" disableRipple={true}>VIDEO</Button>
-              <Button size="large" variant="contained" disableRipple={true}>WIKIPEDIA</Button>
-            </Box> */}
+            
+            <Box sx={{display: 'flex', alignItems: 'center'}} className={styles.btnsWrap}>
+              {launchDetails?.launch?.links?.video_link ? 
+                <Button size="large" variant="contained" target='_blank' disableRipple={true} href={launchDetails?.launch?.links?.video_link}>VIDEO</Button>
+              : null}
+              {launchDetails?.launch?.links?.wikipedia ? 
+                <Button size="large" variant="contained" target='_blank' disableRipple={true} href={launchDetails?.launch?.links?.wikipedia}>WIKIPEDIA</Button>
+              : null}
+            </Box>
+
           </Box>
         ) : null}
       </Container>
